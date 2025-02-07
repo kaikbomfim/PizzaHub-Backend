@@ -52,7 +52,3 @@ O servidor conta com testes unitários que validam suas principais funcionalidad
 ```bash
 npm run test
 ```
-
-### ⚖️ Licença
-
-Este repositório adota a **Licença MIT**, permitindo o uso e a modificação do código como desejar. Peço apenas que seja dado o devido crédito, reconhecendo o esforço e o tempo investidos no desenvolvimento.
