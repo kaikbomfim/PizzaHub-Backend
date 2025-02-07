@@ -1,0 +1,43 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Comment {
+  id          Int      @id @default(autoincrement())
+  pizzaId     Int
+  authorName  String
+  authorEmail String
+  content     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  pizza       Pizza    @relation(fields: [pizzaId], references: [id])
+}
+
+model Company {
+  id        Int      @id @default(autoincrement())
+  name      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  pizzas    Pizza[]
+}
+
+model Pizza {
+  id          Int       @id @default(autoincrement())
+  companyId   Int
+  name        String
+  type        String
+  description String
+  // ~ ingredients --> Mocked
+  price       Float
+  // ~ sizes --> Mocked
+  image       String
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  comments    Comment[]
+  company     Company   @relation(fields: [companyId], references: [id])
+}

@@ -1,0 +1,14 @@
+services:
+  app:
+    container_name: pizzahub-backend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - PORT=${PORT}
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: bash -c "npm run start:dev"
