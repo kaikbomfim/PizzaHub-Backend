@@ -1,6 +1,6 @@
 FROM node:18.19.1
 
-WORKDIR /app
+WORKDIR /
 
 COPY . .
 
