@@ -20,7 +20,7 @@ export class PizzaController {
     private readonly pizzaService: PizzaService,
     private readonly ingredientService: IngredientService,
     private readonly sizeService: SizeService,
-  ) {}
+  ) { }
 
   @Post('/')
   async create(@Body() data: CreatePizzaDto) {
@@ -36,7 +36,7 @@ export class PizzaController {
   ) {
     return await this.pizzaService.findAll(
       page || 1,
-      limit || 10,
+      limit || 20,
       companyId,
       name,
     );

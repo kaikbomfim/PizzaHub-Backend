@@ -6,4 +6,6 @@ COPY . .
 
 RUN npm install --force
 
+RUN npx prisma migrate dev
+
 EXPOSE 3000

@@ -12,3 +12,11 @@ services:
     ports:
       - "3000:3000"
     command: bash -c "npm run start:dev"
+  
+  nginx:
+    image: nginx:alpine
+    container_name: pizzahub-nginx
+    volumes:
+      - ./public:/usr/share/nginx/html
+    ports:
+      - "5005:80"

@@ -20,4 +20,4 @@ import { PizzaModule } from './pizza/pizza.module';
   controllers: [AppController],
   providers: [AppService],
 })
-export class AppModule {}
+export class AppModule { }
