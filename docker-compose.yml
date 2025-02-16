@@ -1,6 +1,6 @@
 services:
   app:
-    container_name: pizzahub-backend
+    container_name: pizzahub-backend-prod
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,13 +10,13 @@ services:
     volumes:
       - .:/app
     ports:
-      - "3000:3000"
+      - '3000:3000'
     command: bash -c "npm run start:dev"
-  
+
   nginx:
     image: nginx:alpine
     container_name: pizzahub-nginx
     volumes:
       - ./public:/usr/share/nginx/html
     ports:
-      - "5005:80"
+      - '5005:80'
