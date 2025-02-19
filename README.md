@@ -28,7 +28,7 @@ O sistema foi projetado para ser executado via **Docker**, proporcionando maior 
 git clone https://github.com/kaikbomfim/PizzaHub-Backend
 ```
 
-Após clonar o repositório, é preciso criar um arquivo `.env` baseado no modelo disponível em `.env.example`, especificando os seguintes valores:
+Após clonar o repositório, é preciso criar um arquivo `.env` (caso ainda não exista)baseado no modelo disponível em `.env.example`, especificando os seguintes valores:
 
 - `DATABASE_URL` — O caminho para o banco de dados;
 - `PORT` — A porta na qual a aplicação será executada.
